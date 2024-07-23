@@ -6,7 +6,7 @@ import time
 from pathlib import Path
 
 LOGO_PATH = Path(__file__).parent / "images" / "logo.png"
-DEFAULT_DATABASE = "RealEstate"
+DEFAULT_DATABASE = "bsm_db_final"
 
 def get_all_database_connections(api_url):
     try:
@@ -68,23 +68,22 @@ WAITING_TIME_TEXTS = [
 ]
 
 INTRODUCTION_TEXT = """
-This app is a proof of concept using the Dataherald NL-2-SQL engine using a streamlit front-end and a dataset of US real estate data.
-The data available includes: rents, sales prices, listing prices, price per square foot, number of homes sold, inventory and number of pending sales up to June 2023.
+This app is a MLops app developed to finetune Archimedes on Golden SQL's
 """  # noqa: E501
 INTRO_EXAMPLE = """
-A sample question you can ask is: Did property prices increase or decrease in the US in 2020?
+A sample question you can ask is: What is the trend of income and expense quarter on quarter?
 """
 
 st.set_page_config(
-    page_title="Dataherald",
+    page_title="astRai",
     page_icon="./images/logo.png",
     layout="wide")
 
 # Setup environment settings
-st.sidebar.title("Dataherald")
+st.sidebar.title("Archimedes")
 st.sidebar.write("Query your structured database in natural language.")
 st.sidebar.write("Enable business users to get answers to ad hoc data questions in seconds.")  # noqa: E501
-st.sidebar.page_link("https://www.dataherald.com/", label="Visit our website", icon="🌐")
+st.sidebar.page_link("https://www.app.astrai.io/", label="Visit our website", icon="🌐")
 st.sidebar.subheader("Connect to the engine")
 HOST = st.sidebar.text_input("Engine URI", value="https://streamlit.dataherald.ai")
 st.session_state["HOST"] = HOST
