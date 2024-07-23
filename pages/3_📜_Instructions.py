@@ -99,7 +99,7 @@ def find_key_by_value(dictionary, target_value):
     return None
 
 st.set_page_config(
-    page_title="Dataherald",
+    page_title="astRai",
     page_icon="./images/logo.png",
     layout="wide",
     initial_sidebar_state="collapsed")
