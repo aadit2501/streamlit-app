@@ -85,7 +85,7 @@ st.sidebar.write("Query your structured database in natural language.")
 st.sidebar.write("Enable business users to get answers to ad hoc data questions in seconds.")  # noqa: E501
 st.sidebar.page_link("https://www.app.astrai.io/", label="Visit our website", icon="🌐")
 st.sidebar.subheader("Connect to the engine")
-HOST = st.sidebar.text_input("Engine URI", value="https://streamlit.dataherald.ai")
+HOST = st.sidebar.text_input("Engine URI", value="http://3.108.76.27:8000")
 st.session_state["HOST"] = HOST
 if st.sidebar.button("Connect"):
     url = HOST + '/api/v1/heartbeat'
