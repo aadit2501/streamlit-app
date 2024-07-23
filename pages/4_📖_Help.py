@@ -3,13 +3,11 @@ import requests
 
 
 DB_INFORMATION = {
-    'Redfin': 'Redfin is a real estate brokerage, and the Redfin dataset has information about homes, townhomes, and condos for sale in the United States.',
+    'BSM_DB': 'BSM is a shippment management company, and the BSM_DB dataset has information about forecasts, expenses, and incomes for their worldwide operations.',
 }
 SAMPLE_QUESTIONS = {
-    'Redfin': [
-        'How many townhomes have been sold in Austin, TX so far in 2023?',
-        'compare home prices in los angeles vs austin since 2022',
-        'Which county has the highest median rent price overall in Florida?'
+    'BSM_DB': [
+        'What is the highest growing expenses is past 4 quarters'
     ]
 }
 
@@ -31,7 +29,7 @@ def get_all_database_connections():
         return {}
 
 st.set_page_config(
-    page_title="Dataherald",
+    page_title="astRai",
     page_icon="./images/logo.png",
     layout="wide")
 
